@@ -18,7 +18,7 @@ export function* apiSaga() {
 
     try {
         const pk = yield call(getPokemon, stop - start + 1, start - 1)
-        yield put(setPokemon(pk.results))
+        yield put(setPokemon(pk))
         yield put(setIdle())
     } catch (error) {
         console.log(error);
